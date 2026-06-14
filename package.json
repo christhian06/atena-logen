@@ -11,13 +11,20 @@
     "test:backend": "npm test --workspace=backend",
     "test:shared": "npm test --workspace=shared",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.8.4",
     "typescript-eslint": "^8.61.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,mjs,cjs}": "eslint --fix",
+    "*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}": "prettier --write"
   }
 }
