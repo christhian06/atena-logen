@@ -26,4 +26,5 @@ stack. Explique conceitos centrais conforme aparecem: componentes e props, JSX, 
 (`useState`, `useEffect`), por que Zustand em vez de prop-drilling/Context, e como o Vite difere
 de um bundler tradicional (dev server com HMR).
 
-**Ao terminar**: atualize `docs/PROGRESS.md` (Fase 5, atividade correspondente).
+**Ao terminar**: marque as subtarefas concluídas em `docs/TASKS.md` (Fase 5, atividade
+correspondente, adicionando novas se surgirem) e atualize `docs/PROGRESS.md`.

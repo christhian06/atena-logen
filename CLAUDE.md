@@ -24,10 +24,13 @@ atividade nova**.
 
 ## Estado atual
 
-O progresso detalhado, atividade por atividade (seção 9 do ATENA_LOGEN.md), está em
-[docs/PROGRESS.md](docs/PROGRESS.md). **Sempre consulte esse arquivo no início da sessão para
-saber onde paramos, e atualize-o no fim da sessão** (ou ao concluir uma atividade) — é a memória
-de continuidade entre sessões.
+- [docs/PROGRESS.md](docs/PROGRESS.md): "Onde paramos", status resumido por fase e log de
+  sessões. **Sempre consulte no início da sessão** para saber onde paramos, e atualize-o no fim
+  da sessão (ou ao concluir uma atividade) — é a memória de continuidade entre sessões.
+- [docs/TASKS.md](docs/TASKS.md): checklist granular de todas as fases/atividades/subtarefas
+  (baseado na seção 9 do ATENA_LOGEN.md). Marque o que está em execução (🟡), conclua subtarefas
+  (`[x]`) e adicione novas tarefas/subtarefas conforme o trabalho for sendo refinado. Mantenha-o
+  coerente com `PROGRESS.md`.
 
 ## Stack tecnológica (resumo)
 
@@ -58,7 +61,8 @@ Logen/
 ├── web/                   # frontend React (ainda não iniciado)
 ├── docs/
 │   ├── ATENA_LOGEN.md     # especificação completa
-│   ├── PROGRESS.md        # estado do projeto, atividade por atividade
+│   ├── PROGRESS.md        # onde paramos, status por fase, log de sessões
+│   ├── TASKS.md           # checklist granular de atividades/subtarefas
 │   └── adr/               # Architecture Decision Records
 └── .claude/agents/        # subagentes especializados (ver abaixo)
 ```

@@ -23,4 +23,5 @@ O app é offline-first: toda lógica de inferência roda localmente primeiro.
 secundário. Mantenha explicações de Dart sucintas, focando em paralelos com o TypeScript do
 `shared/event-engine` (ex.: "isso é o equivalente Dart do union type X em TS").
 
-**Ao terminar**: atualize `docs/PROGRESS.md` (Fase 4, atividade correspondente).
+**Ao terminar**: marque as subtarefas concluídas em `docs/TASKS.md` (Fase 4, atividade
+correspondente, adicionando novas se surgirem) e atualize `docs/PROGRESS.md`.

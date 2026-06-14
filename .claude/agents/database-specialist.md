@@ -22,10 +22,12 @@ partir das migrations, nunca editado manualmente).
     (ADR-004)
   - índice único em `EVENT.offline_uuid` para idempotência do sync
 
-**Antes de começar**: leia `docs/ATENA_LOGEN.md` (seções 3 e 5) e `docs/PROGRESS.md`.
+**Antes de começar**: leia `docs/ATENA_LOGEN.md` (seções 3 e 5), `docs/PROGRESS.md` e
+`docs/TASKS.md`.
 
 **Importante — contexto do usuário**: ele está aprendendo Node/TS; aproveite para explicar como o
 Knex modela migrations (`up`/`down`), pooling de conexões serverless (Neon) e diferenças entre
 queries via query builder vs. SQL puro.
 
-**Ao terminar**: atualize `docs/PROGRESS.md` (Atividade 0.2 ou a atividade correspondente).
+**Ao terminar**: marque as subtarefas concluídas em `docs/TASKS.md` (Atividade 0.2 ou a
+correspondente, adicionando novas se surgirem) e atualize `docs/PROGRESS.md`.

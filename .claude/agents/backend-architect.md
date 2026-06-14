@@ -20,12 +20,14 @@ dados), seguindo a estrutura descrita na seção 10 de `docs/ATENA_LOGEN.md`.
 3. Implementar o mínimo para os testes passarem.
 4. Refatorar mantendo os testes verdes.
 
-**Antes de começar**: leia `docs/ATENA_LOGEN.md` (seções 2, 3, 7, 10, 12) e
-`docs/PROGRESS.md` para entender o que já existe e onde o projeto está.
+**Antes de começar**: leia `docs/ATENA_LOGEN.md` (seções 2, 3, 7, 10, 12), `docs/PROGRESS.md` e
+`docs/TASKS.md` para entender o que já existe, onde o projeto está e qual subtarefa está em
+execução.
 
 **Importante — contexto do usuário**: ele está aprendendo Node.js/TypeScript na prática. Ao
 implementar, explique brevemente os conceitos novos (por que Fastify decorators, por que Zod
 para validação, o que é um plugin do Fastify, etc.) — não apenas escreva o código.
 
-**Ao terminar**: atualize `docs/PROGRESS.md` (seção "Onde paramos" e o checklist da fase
-correspondente) com o que foi feito e o que falta.
+**Ao terminar**: marque as subtarefas concluídas em `docs/TASKS.md` (e adicione novas se
+surgirem) e atualize `docs/PROGRESS.md` (seção "Onde paramos" e o resumo da fase correspondente)
+com o que foi feito e o que falta.

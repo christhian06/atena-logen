@@ -3,8 +3,10 @@
 Este arquivo é a **memória de continuidade** entre sessões. No início de cada sessão, leia a
 seção "Onde paramos" abaixo. No fim de cada sessão (ou ao concluir uma atividade), atualize-a.
 
-O checklist completo de atividades está na seção 9 de [ATENA_LOGEN.md](ATENA_LOGEN.md) — aqui só
-registramos o **status real** e decisões/aprendizados relevantes.
+O checklist granular de todas as fases/atividades/subtarefas vive em
+[TASKS.md](TASKS.md) — é lá que marcamos o que está em execução, concluído, ou que vai sendo
+adicionado conforme o trabalho avança. Este arquivo (`PROGRESS.md`) traz o resumo por fase e o
+histórico de sessões; os dois devem estar sempre coerentes.
 
 ---
 
@@ -29,21 +31,8 @@ banco de dados / Knex) — a decidir com o usuário na próxima sessão.
 | 5 — Painel web administrativo | ⚪ não iniciada | |
 | 6 — Qualidade e produção | ⚪ não iniciada | |
 
-### Fase 0 — detalhe
-
-- [x] 0.1.1 Monorepo criado (`backend`, `shared`, `web`, npm workspaces)
-- [x] 0.1.2 ESLint (flat config) + Prettier configurados na raiz
-- [ ] 0.1.3 Git hooks (husky + lint-staged)
-- [ ] 0.1.4 CI básico (GitHub Actions)
-- [x] 0.1.5 `.env.example` criado para `backend` e `web` (shared não precisa)
-- [ ] 0.2.x Setup do banco de dados (Postgres/Neon, Knex, migrations, seeds)
-- [x] 0.3.1 Backend Node.js + TypeScript inicializado
-- [x] 0.3.2 Fastify configurado (servidor básico com `/health`)
-- [ ] 0.3.3 Conexão com PostgreSQL (pool de conexões)
-- [ ] 0.3.4 Jest + Supertest configurados
-- [ ] 0.3.5 Estrutura de pastas completa de módulos (`src/modules/...`)
-- [ ] 0.3.6 Logger estruturado (pino/winston) — hoje usa só o logger padrão do Fastify
-- [ ] 0.3.7 Middleware de tratamento de erros
+O detalhe subtarefa-a-subtarefa da Fase 0 (e de todas as demais fases) está em
+[TASKS.md](TASKS.md).
 
 ---
 

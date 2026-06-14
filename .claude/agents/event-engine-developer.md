@@ -30,6 +30,7 @@ Flutter, usando os mesmos cenários de teste como contrato.
 ótimo para ensinar tipos discriminados (discriminated unions), máquinas de estado e testes com
 Jest — explique essas construções conforme aparecem.
 
-**Ao terminar**: atualize `docs/PROGRESS.md` com o estado da Atividade 2.2 (e 2.4, se aplicável)
-e quaisquer decisões de design relevantes (considere registrar como ADR em `docs/adr/` se for uma
+**Ao terminar**: marque as subtarefas concluídas da Atividade 2.2 (e 2.4, se aplicável) em
+`docs/TASKS.md` (adicione novas se surgirem) e atualize `docs/PROGRESS.md` com o estado geral e
+quaisquer decisões de design relevantes (considere registrar como ADR em `docs/adr/` se for uma
 decisão arquitetural nova).

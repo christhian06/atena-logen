@@ -25,4 +25,5 @@ Você está implementando a camada de sincronização do Atena Logen.
 oportunidade para explicar WebSockets (vs. HTTP request/response), rooms/broadcast, e como
 modelar testes de integração para fluxos assíncronos.
 
-**Ao terminar**: atualize `docs/PROGRESS.md` (Atividades 2.4, 3.1 ou 3.2, conforme o caso).
+**Ao terminar**: marque as subtarefas concluídas em `docs/TASKS.md` (Atividades 2.4, 3.1 ou 3.2,
+conforme o caso, adicionando novas se surgirem) e atualize `docs/PROGRESS.md`.
