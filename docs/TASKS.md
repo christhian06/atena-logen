@@ -21,7 +21,8 @@ dia a dia.
 
 ## 🟡 Em execução agora
 
-_(nada em execução — decidir próximo passo: 0.2.x setup do banco de dados ou 0.3.x setup do backend)_
+_(nada em execução — Atividade 0.2 concluída; próximo passo sugerido: Atividade 0.3, setup do
+backend)_
 
 ---
 
@@ -37,12 +38,36 @@ _(nada em execução — decidir próximo passo: 0.2.x setup do banco de dados o
 
 ### Atividade 0.2 — Setup do banco de dados
 
-- [ ] 0.2.1 Provisionar PostgreSQL (Neon)
-- [ ] 0.2.2 Criar banco de desenvolvimento e banco de teste
-- [ ] 0.2.3 Executar schema SQL (`backend/src/database/schema.sql`)
-- [ ] 0.2.4 Criar sistema de migrations (Knex)
-- [ ] 0.2.5 Criar seeds de dados para desenvolvimento (empresa, planta, setores, endereços, tags, pallets)
-- [ ] 0.2.6 Validar constraints e views com queries de teste
+- [x] 0.2.1 Provisionar PostgreSQL (Neon)
+- [x] 0.2.2 Criar banco de desenvolvimento e banco de teste
+- [x] 0.2.3 Executar schema SQL (`backend/src/database/schema.sql`) — via migrations Knex
+      equivalentes (ver 0.2.4)
+- [x] 0.2.4 Criar sistema de migrations (Knex)
+  - [x] 10 migrations em `backend/src/database/migrations/`, seguindo as CAMADAS do
+        `schema.sql` (extensão + hierarquia geográfica, address_type/address, tags + FK,
+        produtos/pallet_type, pallets, operação, sessões, event_type+seed+event+índice
+        único, índices restantes, views)
+  - [x] Corrigido `backend/package.json`: scripts `db:*` apontavam para
+        `node_modules/knex/bin/cli.js` (inexistente dentro de `backend/` em npm
+        workspaces); ajustado para `../node_modules/knex/bin/cli.js`
+  - [x] `npm run db:migrate --workspace=backend` (dev) — 10 migrations aplicadas com sucesso
+  - [x] `npm run db:migrate:test --workspace=backend` (test) — 10 migrations aplicadas com sucesso
+- [x] 0.2.5 Criar seeds de dados para desenvolvimento (empresa, planta, setores, endereços, tags, pallets)
+  - [x] `backend/src/database/seeds/01_dev_seed.ts` — idempotente (IDs fixos + `del()` antes
+        do insert, respeitando ordem de FK); 1 company, 1 plant, 3 sectors, 2 address_type,
+        3 address, 5 tags (3 de endereço, 2 de pallet), 1 pallet_type, 3 pallets (2
+        empilhados no mesmo endereço, 1 solto via GPS), 2 products, 4 pallet_product
+  - [x] `npm run db:seed --workspace=backend` executado no banco de dev (rodado 2x para
+        confirmar idempotência)
+- [x] 0.2.6 Validar constraints e views com queries de teste
+  - [x] `v_address_occupation`, `v_pallet_location`, `v_sync_queue` retornam dados coerentes
+        com o seed
+  - [x] `address_type.total_positions` (coluna gerada) calcula corretamente
+        (1×3=3, 4×1=4)
+  - [x] `event_type` populado com os 8 tipos do seed do schema.sql
+  - [x] Testado (em transações com rollback): violação de `tag.epc` UNIQUE, `chk_location`,
+        `chk_position` e valor inválido em `tag_type_enum` — todos rejeitados como esperado
+  - [x] `npm run lint` e `npm run build --workspace=backend` passam sem erros
 
 ### Atividade 0.3 — Setup do backend
 
