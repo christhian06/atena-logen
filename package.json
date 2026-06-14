@@ -1,0 +1,23 @@
+{
+  "name": "atena-logen",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "shared",
+    "web"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=backend",
+    "test:backend": "npm test --workspace=backend",
+    "test:shared": "npm test --workspace=shared",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.4",
+    "typescript-eslint": "^8.61.0"
+  }
+}
