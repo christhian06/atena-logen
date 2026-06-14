@@ -21,20 +21,22 @@ dia a dia.
 
 ## 🟡 Em execução agora
 
-_(nada em execução — aguardando decisão do usuário sobre o próximo passo: 0.1.3/0.1.4 ou 0.2.x)_
+_(nada em execução — decidir próximo passo: 0.2.x setup do banco de dados ou 0.3.x setup do backend)_
 
 ---
 
 ## Fase 0 — Fundação (infraestrutura e base)
 
 ### Atividade 0.1 — Setup do repositório
+
 - [x] 0.1.1 Criar monorepo (estrutura `/backend`, `/shared`, `/web`, npm workspaces)
 - [x] 0.1.2 Configurar ESLint + Prettier com regras compartilhadas
-- [ ] 0.1.3 Configurar Git hooks (husky + lint-staged)
-- [ ] 0.1.4 Configurar CI básico (rodar testes a cada push)
+- [x] 0.1.3 Configurar Git hooks (husky + lint-staged)
+- [x] 0.1.4 Configurar CI básico (rodar testes a cada push)
 - [x] 0.1.5 Criar `.env.example` para cada pacote (backend, web; shared não precisa)
 
 ### Atividade 0.2 — Setup do banco de dados
+
 - [ ] 0.2.1 Provisionar PostgreSQL (Neon)
 - [ ] 0.2.2 Criar banco de desenvolvimento e banco de teste
 - [ ] 0.2.3 Executar schema SQL (`backend/src/database/schema.sql`)
@@ -43,6 +45,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 0.2.6 Validar constraints e views com queries de teste
 
 ### Atividade 0.3 — Setup do backend
+
 - [x] 0.3.1 Inicializar projeto Node.js com TypeScript
 - [x] 0.3.2 Configurar framework HTTP (Fastify)
 - [ ] 0.3.3 Configurar conexão com PostgreSQL (pool de conexões)
@@ -56,6 +59,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 ## Fase 1 — Autenticação e gestão de entidades
 
 ### Atividade 1.1 — Autenticação
+
 - [ ] 1.1.1 Especificar endpoints de auth (POST /auth/login, POST /auth/refresh, POST /auth/logout)
 - [ ] 1.1.2 Escrever testes de auth (red)
 - [ ] 1.1.3 Implementar hash de senha (bcrypt)
@@ -65,6 +69,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 1.1.7 Passar testes (green) e refatorar
 
 ### Atividade 1.2 — CRUD de hierarquia geográfica
+
 - [ ] 1.2.1 Especificar endpoints de company, plant, sector
 - [ ] 1.2.2 Escrever testes (red)
 - [ ] 1.2.3 Implementar repositories (queries SQL)
@@ -73,6 +78,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 1.2.6 Passar testes e refatorar
 
 ### Atividade 1.3 — CRUD de tipos e configurações
+
 - [ ] 1.3.1 Especificar endpoints de address_type, pallet_type, product
 - [ ] 1.3.2 Escrever testes (red)
 - [ ] 1.3.3 Implementar repositories, services, controllers
@@ -80,6 +86,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 1.3.5 Passar testes e refatorar
 
 ### Atividade 1.4 — CRUD de endereços e tags
+
 - [ ] 1.4.1 Especificar endpoints de address e tag
 - [ ] 1.4.2 Escrever testes (red)
 - [ ] 1.4.3 Implementar associação tag ↔ address e tag ↔ pallet
@@ -87,6 +94,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 1.4.5 Passar testes e refatorar
 
 ### Atividade 1.5 — CRUD de pallets
+
 - [ ] 1.5.1 Especificar endpoints de pallet e pallet_product
 - [ ] 1.5.2 Escrever testes (red)
 - [ ] 1.5.3 Implementar gestão de produtos no pallet (add/remove/update)
@@ -94,6 +102,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 1.5.5 Passar testes e refatorar
 
 ### Atividade 1.6 — CRUD de operação (users, devices, forklifts)
+
 - [ ] 1.6.1 Especificar endpoints de user, device, forklift
 - [ ] 1.6.2 Escrever testes (red)
 - [ ] 1.6.3 Implementar repositories, services, controllers
@@ -104,6 +113,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 ## Fase 2 — Motor de eventos e sessões
 
 ### Atividade 2.1 — Gestão de sessões
+
 - [ ] 2.1.1 Especificar endpoints de user_session (start, end, current)
 - [ ] 2.1.2 Escrever testes (red)
 - [ ] 2.1.3 Implementar abertura de sessão com validação de dispositivo e empilhadeira
@@ -111,6 +121,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 2.1.5 Passar testes e refatorar
 
 ### Atividade 2.2 — Motor de inferência de eventos (módulo shared)
+
 - [ ] 2.2.1 Especificar todas as regras de inferência com exemplos de sequências
 - [ ] 2.2.2 Escrever testes unitários exaustivos cobrindo todos os cenários (red)
   - [ ] Sequência normal de pick → store
@@ -124,6 +135,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 2.2.5 Refatorar e documentar
 
 ### Atividade 2.3 — Endpoint de recebimento de eventos
+
 - [ ] 2.3.1 Especificar endpoint de ingestão de evento único e em lote
 - [ ] 2.3.2 Escrever testes (red)
 - [ ] 2.3.3 Implementar validação de schema dos eventos recebidos
@@ -132,6 +144,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 2.3.6 Passar testes e refatorar
 
 ### Atividade 2.4 — Motor de reconciliação
+
 - [ ] 2.4.1 Especificar todos os cenários de conflito com exemplos
 - [ ] 2.4.2 Escrever testes unitários de reconciliação (red)
   - [ ] Dois operadores retiram do mesmo endereço offline
@@ -147,6 +160,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 ## Fase 3 — Sincronização em tempo real
 
 ### Atividade 3.1 — WebSocket
+
 - [ ] 3.1.1 Especificar protocolo de mensagens WebSocket (tipos, formato, auth)
 - [ ] 3.1.2 Escrever testes de integração (red)
 - [ ] 3.1.3 Implementar servidor WebSocket com autenticação JWT
@@ -155,6 +169,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 3.1.6 Passar testes e refatorar
 
 ### Atividade 3.2 — Endpoint de sync em lote
+
 - [ ] 3.2.1 Especificar endpoint de sync (recebe array de eventos, devolve estado reconciliado)
 - [ ] 3.2.2 Escrever testes (red)
 - [ ] 3.2.3 Implementar processamento ordenado por occurred_at
@@ -167,6 +182,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 ## Fase 4 — App mobile
 
 ### Atividade 4.1 — Setup do app Flutter
+
 - [ ] 4.1.1 Inicializar projeto Flutter com suporte a Android e iOS
 - [ ] 4.1.2 Configurar dependências: `flutter_blue_plus`, `sqflite`, `web_socket_channel`, `geolocator`, `riverpod`, `dio`
 - [ ] 4.1.3 Configurar SQLite local com schema espelhando o backend
@@ -174,12 +190,14 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 4.1.5 Configurar Riverpod como gerenciamento de estado
 
 ### Atividade 4.2 — Motor de inferência em Dart
+
 - [ ] 4.2.1 Traduzir `shared/event-engine` de TypeScript para Dart
 - [ ] 4.2.2 Reescrever todos os testes do motor em Dart (`engine_test.dart`)
 - [ ] 4.2.3 Garantir que os cenários de teste são idênticos aos do TypeScript (testes de contrato)
 - [ ] 4.2.4 Cobertura de testes: 100% obrigatória
 
 ### Atividade 4.3 — BLE e RFID
+
 - [ ] 4.3.1 Especificar protocolo de comunicação BLE com o leitor RFID
 - [ ] 4.3.2 Implementar scan e conexão ao leitor via `flutter_blue_plus`
 - [ ] 4.3.3 Implementar recebimento contínuo de leituras EPC
@@ -187,6 +205,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 4.3.5 Integrar leituras com o motor de inferência Dart
 
 ### Atividade 4.4 — Fluxo de sessão no app
+
 - [ ] 4.4.1 Tela de login
 - [ ] 4.4.2 Tela de seleção de empilhadeira (início de sessão)
 - [ ] 4.4.3 Tela principal de operação (leituras em tempo real + feedback de eventos)
@@ -194,6 +213,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 4.4.5 Encerramento de sessão
 
 ### Atividade 4.5 — Sincronização no app
+
 - [ ] 4.5.1 Implementar cliente WebSocket com reconexão automática (`web_socket_channel`)
 - [ ] 4.5.2 Implementar detecção de conectividade
 - [ ] 4.5.3 Implementar fila de sync com drenagem ordenada
@@ -205,18 +225,21 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 ## Fase 5 — Painel web administrativo
 
 ### Atividade 5.1 — Setup do frontend
+
 - [ ] 5.1.1 Inicializar projeto React com TypeScript
 - [ ] 5.1.2 Configurar roteamento
 - [ ] 5.1.3 Configurar cliente HTTP e WebSocket
 - [ ] 5.1.4 Configurar gerenciamento de estado
 
 ### Atividade 5.2 — Gestão de cadastros
+
 - [ ] 5.2.1 Telas de CRUD: empresa, planta, setor, endereço
 - [ ] 5.2.2 Telas de CRUD: tipos de endereço, tipos de pallet, produtos
 - [ ] 5.2.3 Telas de CRUD: usuários, dispositivos, empilhadeiras
 - [ ] 5.2.4 Tela de cadastro e associação de tags RFID
 
 ### Atividade 5.3 — Mapa do CD
+
 - [ ] 5.3.1 Visualização de plantas no Google Maps (por coordenada)
 - [ ] 5.3.2 Visualização do CD por setor e endereço
 - [ ] 5.3.3 Indicador visual de ocupação por endereço (usando v_address_occupation)
@@ -224,6 +247,7 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 - [ ] 5.3.5 Atualização em tempo real via WebSocket
 
 ### Atividade 5.4 — Rastreabilidade
+
 - [ ] 5.4.1 Busca de pallet por código ou SKU de produto
 - [ ] 5.4.2 Localização atual do pallet (endereço ou GPS no mapa)
 - [ ] 5.4.3 Histórico de movimentações de um pallet
@@ -235,12 +259,14 @@ _(nada em execução — aguardando decisão do usuário sobre o próximo passo:
 ## Fase 6 — Qualidade e produção
 
 ### Atividade 6.1 — Testes de carga e integração
+
 - [ ] 6.1.1 Simular múltiplos operadores simultâneos com sync concorrente
 - [ ] 6.1.2 Testar reconciliação com cenários de conflito reais
 - [ ] 6.1.3 Testar comportamento offline por períodos prolongados
 - [ ] 6.1.4 Medir latência de sync e WebSocket sob carga
 
 ### Atividade 6.2 — Deploy e monitoramento
+
 - [ ] 6.2.1 Configurar ambiente de produção na VM
 - [ ] 6.2.2 Configurar variáveis de ambiente de produção
 - [ ] 6.2.3 Configurar PM2 ou similar para gestão do processo Node.js
